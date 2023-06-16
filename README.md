@@ -27,15 +27,21 @@ In last statement give the print statement
 Developed by : ARHAM S
 Register no : 212222110005
 import sys
-count=0
-with open(sys.argv[1],'r) as f:
-    for line in f:
-    word=line.split()
-    count+=line.(word)
-print("Word Count in File=",count)
+fp = open(sys.argv[1],"r")
+d = {}
+for i in fp:
+    for w in i.split():
+        if w not in d.keys():
+            d[w]=1
+            
+        else:
+            d[w] +=1
+            
+print(d)
+
 ```
 ### OUTPUT:
-![py1](https://github.com/arhamshajahan/command-line-arguments-to-count-word/assets/127313881/17f8683f-35b6-43ae-af76-2fdfe76decb8)
+![new](https://github.com/arhamshajahan/command-line-arguments-to-count-word/assets/127313881/14ad419f-90a3-4dc1-b4e9-ae6ab86a2f85)
 
 ## RESULT:
 Thus the program is written to find the word count from the contents of a file using command line arguments.
